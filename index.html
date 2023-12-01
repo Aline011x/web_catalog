@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Js Catalog</title>
+    <script src="./data/data.js"></script>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="#brand">Nombre de la Marca</a></li>
+        <li><a href="#home">Inicio</a></li>
+        <li><a href="#contact">Contacto</a></li>
+        <li style="float: right">
+          <a class="active" href="#about">Sobre Nosotros</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="row">
+      <div class="column left">
+        <div class="container">
+          <div id="search-container" class="search-container">
+            <input
+              type="search"
+              id="search-input"
+              placeholder="Busca por el nombre de producto..."
+            />
+            <button id="search">Buscar</button>
+          </div>
+          <div id="filter-container">
+            <button class="filter-button" onclick="filterProduct('Todos')">
+              Todos
+            </button>
+            <button class="filter-button" onclick="filterProduct('Filtro1')">
+              Filtro1
+            </button>
+            <button class="filter-button" onclick="filterProduct('Filtro2')">
+              Filtro2
+            </button>
+            <button class="filter-button" onclick="filterProduct('Filtro3')">
+              Filtro3
+            </button>
+            <button class="filter-button" onclick="filterProduct('Filtro4')">
+              Filtro4
+            </button>
+          </div>
+          <div id="catalog"></div>
+        </div>
+      </div>
+      <div class="column right">
+        <div id="cart" class="cart">Carrito de compras</div>
+      </div>
+    </div>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
